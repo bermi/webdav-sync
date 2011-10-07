@@ -57,7 +57,7 @@ Simply execute `cake dev` to start continuous compilation. You may also want to 
 
 ### Change log
 
- - 0.0.1: First release
+ - 0.1.1: First release
 
 
 ### TODO

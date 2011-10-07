@@ -1,0 +1,35 @@
+{
+   "name": "webdav-sync",
+   "version": "0.0.1",
+   "description": "Basic local sync to WebDAV servers",
+   "author": "Bermi Ferrer <bermi@bermilabs.com>",
+   "keywords": [
+       "webdav-sync"
+   ],
+   "bugs": {
+       "web": "http://github.com/bermi/webdav-sync/issues" 
+   },
+   "licenses": [
+       {
+           "type": "MIT",
+           "url": "http://opensource.org/licenses/mit-license.php" 
+       } 
+   ],
+   "repositories": [
+       {
+           "type": "git",
+           "url": "git://github.com/bermi/webdav-sync.git" 
+       } 
+   ],
+   "main": "index",
+   "bin": "./bin/webdav-sync",
+   "directories": {
+       "lib": "./lib"
+   },
+   "os": [ "linux", "darwin" ],
+   "dependencies": {
+     "watch": "*",
+     "colors": "*"
+   },
+   "engines": { "node": "0.4.x" }
+}

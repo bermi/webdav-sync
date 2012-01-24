@@ -1,6 +1,6 @@
 {
    "name": "webdav-sync",
-   "version": "0.2.1",
+   "version": "0.2.2",
    "description": "Basic local sync to WebDAV servers",
    "author": "Bermi Ferrer <bermi@bermilabs.com>",
    "keywords": [

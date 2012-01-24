@@ -11,7 +11,7 @@ print = (data) -> console.log data.toString().trim()
 
 
 task 'build', 'Compile webdav-sync Coffeescript source to Javascript', ->
-  exec 'mkdir -p lib && coffee -c -o lib src', handleError
+  exec 'mkdir -p lib && coffee -c -b -o lib src', handleError
 
 task 'clean', 'Remove generated Javascripts', ->
   exec 'rm -fr lib', handleError

@@ -13,7 +13,7 @@ module.exports = (options={}) ->
   processed = []
   
   options.curl or= "curl --insecure --verbose"
-  options.ignored or= [ ".hg", ".git", ".DS_Store" ]
+  options.ignored or= [ ".hg", ".git", ".DS_Store", ".svn" ]
   options.monitor or= ignoreDotFiles: true
   
   throw new Error("remote_base can't be ommited")  unless options.remote_base

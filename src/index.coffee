@@ -6,10 +6,7 @@
 #
 # MIT Licensed
 
+module.exports = require './webdav_sync'
+
 # Version.
-module.exports.version = '0.2.2'
-
-# Exports
-
-module.exports.__defineGetter__ 'webdav_sync', ->
-  @_webdav-sync ||= require './webdav_sync'
+module.exports.version = '0.2.3'

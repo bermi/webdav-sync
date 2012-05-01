@@ -8,5 +8,5 @@
 
 module.exports = require './webdav_sync'
 
-# Version.
-module.exports.version = '0.2.3'
+# Load package information using `pkginfo`.
+require('pkginfo')(module, 'version');

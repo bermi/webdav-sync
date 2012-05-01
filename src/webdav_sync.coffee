@@ -1,6 +1,5 @@
 watch = require("watch")
 fs = require("fs")
-sys = require("sys")
 colors = require("colors")
 util = require("util")
 exec = require("child_process").exec
@@ -22,9 +21,9 @@ module.exports = (options={}) ->
   run = (command, message) ->
     _runCommand command, (err, success) ->
       if err
-        sys.puts err.red
+        util.puts err.red
       else
-        sys.puts message
+        util.puts message
 
   _runCommand = (command, callback) ->
     exec command, (error, stdout, stderr) ->
@@ -34,7 +33,7 @@ module.exports = (options={}) ->
         callback "ERROR with [cmd] ".red + " #{command.grey} #{stdout}", false
 
   created = (path, stats) ->
-    return  if "w#{path}#{stats.mtime}" in processed
+    return  if !stats || "w#{path}#{stats.mtime}" in processed
     processed.push "w#{path}#{stats.mtime}"
     rel_path = path.replace(options.local_base, "")
     destination = options.remote_base + rel_path
@@ -47,7 +46,7 @@ module.exports = (options={}) ->
       run command, message
 
   changed = (path, stats) ->
-    return  if "m#{path}#{stats.mtime}" in processed
+    return  if !stats || "w#{path}#{stats.mtime}" in processed
     processed.push "m#{path}#{stats.mtime}"
     return  if stats.atime > stats.mtime
     rel_path = path.replace(options.local_base, "")
@@ -59,12 +58,12 @@ module.exports = (options={}) ->
       run command, message
 
   removed = (path, stats) ->
-    return  if "d#{path}#{stats.mtime}" in processed
+    return  if !stats || "d#{path}#{stats.mtime}" in processed
     processed.push "d#{path}#{stats.mtime}"
     rel_path = path.replace(options.local_base, "")
     destination = options.remote_base + rel_path
     return  if ignoreFile(rel_path)
-    command = "#{options.curl} -X DELETE #{destination}"  if stats.isFile() or stats.isDirectory()
+    command = "#{options.curl} -X DELETE #{destination}"
     if command?
       message = "[removed] ".bold + rel_path.red
       run command, message
@@ -73,7 +72,7 @@ module.exports = (options={}) ->
     path in options.ignored
   
   start: ->
-    sys.puts "Starting webdav-sync from #{options.local_base.green} to #{options.remote_base.yellow}"
+    util.puts "Starting webdav-sync from #{options.local_base.green} to #{options.remote_base.yellow}"
     watch.createMonitor options.local_base, options.monitor, (monitor) ->
       monitor.on "created", created
       monitor.on "changed", changed

@@ -58,7 +58,7 @@ Simply execute `cake dev` to start continuous compilation. You may also want to 
 ### Change log
 
  - 0.1.1: First release
-
+ - 0.2.4: Upgrading to node 0.6.x
 
 ### TODO
 

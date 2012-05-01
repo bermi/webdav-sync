@@ -1,6 +1,6 @@
 {
    "name": "webdav-sync",
-   "version": "0.2.3",
+   "version": "0.2.4",
    "description": "Basic local sync to WebDAV servers",
    "author": "Bermi Ferrer <bermi@bermilabs.com>",
    "keywords": [
@@ -34,7 +34,8 @@
    "dependencies": {
      "watch": "0.5.x",
      "colors": "0.6.x",
-     "optimist": "0.3.x"
+     "optimist": "0.3.x",
+     "pkginfo": "0.2.x"
    },
     "devDependencies": {
       "coffee-script" : "1.2.x"

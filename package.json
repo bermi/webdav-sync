@@ -3,6 +3,7 @@
    "version": "0.2.4",
    "description": "Basic local sync to WebDAV servers",
    "author": "Bermi Ferrer <bermi@bermilabs.com>",
+   "homepage": "http://github.com/bermi/webdav-sync/",
    "keywords": [
        "webdav-sync",
        "webdav",

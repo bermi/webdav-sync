@@ -1,45 +1,63 @@
 {
-   "name": "webdav-sync",
-   "version": "0.2.4",
-   "description": "Basic local sync to WebDAV servers",
-   "author": "Bermi Ferrer <bermi@bermilabs.com>",
-   "homepage": "http://github.com/bermi/webdav-sync/",
-   "keywords": [
-       "webdav-sync",
-       "webdav",
-       "demandware",
-       "sync",
-       "watch",
-       "mirror"
-   ],
-   "bugs": {
-       "url": "http://github.com/bermi/webdav-sync/issues" 
-   },
-   "licenses": [
-       {
-           "type": "MIT",
-           "url": "http://opensource.org/licenses/mit-license.php" 
-       } 
-   ],
-   "repositories": [
-       {
-           "type": "git",
-           "url": "git://github.com/bermi/webdav-sync.git" 
-       } 
-   ],
-   "main": "index",
-   "bin": "./bin/webdav-sync",
-   "directories": {
-       "lib": "./lib"
-   },
-   "dependencies": {
-     "watch": "0.5.x",
-     "colors": "0.6.x",
-     "optimist": "0.3.x",
-     "pkginfo": "0.2.x"
-   },
-    "devDependencies": {
-      "coffee-script" : "1.2.x"
-    },
-   "engines": { "node": ">=0.6" }
+  "name": "webdav-sync",
+  "version": "0.2.4",
+  "description": "Basic local sync to WebDAV servers",
+  "author": {
+    "name": "Bermi Ferrer",
+    "email": "bermi@bermilabs.com"
+  },
+  "homepage": "http://github.com/bermi/webdav-sync/",
+  "keywords": [
+    "webdav-sync",
+    "webdav",
+    "demandware",
+    "sync",
+    "watch",
+    "mirror"
+  ],
+  "bugs": {
+    "url": "http://github.com/bermi/webdav-sync/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "git",
+      "url": "git://github.com/bermi/webdav-sync.git"
+    }
+  ],
+  "main": "index",
+  "bin": {
+    "webdav-sync": "./bin/webdav-sync"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "dependencies": {
+    "watch": "0.5.x",
+    "colors": "0.6.x",
+    "optimist": "0.3.x",
+    "pkginfo": "0.2.x"
+  },
+  "devDependencies": {
+    "coffee-script": "1.2.x"
+  },
+  "engines": {
+    "node": ">=0.6"
+  },
+  "readme": "# webdav-sync\n\nSync a local directory with a WebDAV server.\n\nThis tool was created because I wanted an alternative method to work\nwith the Demandware e-commerce platform without requiring their \nIDE UX Studio which uses WebDAV to push the code to the development server.\n\n### Dependencies\n\nThis applications requires a local copy of curl.\n\n### Installation\n\n    npm install webdav-sync\n\n### Usage\n\n#### From the command line\n\nShow help:\n\n    webdav-sync -h\n\nOptions:\n  --remote_base  URL for the remote endpoint            [required]\n  --local_base   Path to the local directory            [required]\n  --curl         Default curl command                   [default: \"curl --insecure --verbose\"]\n  --ignored      Comma separated list of ignored paths  [default: \".hg,.git,.svn,.DS_Store\"]\n  --help         Displays this help\n\n\nSyncing /var/src/code with https://user:pass@demandware.com/webdav/cartridge/\n\n    webdav-sync --local_base /var/src/code --remote_base \"https://user:pass@demandware.com/webdav/\"\n\n\n#### From node.js\n\nYou can also include webdav-sync into your node app\n\n    var options = {\n        local_base: \"/var/src/code\",\n        remote_base: \"https://user:pass@demandware.com/webdav/\"\n    };\n    var sync = (require('webdav-sync'))(options);\n    sync.start();\n\n\n### Development\n\nIf you clone the repository or download a tarball from github you will need CoffeeScript.\n\nIt can be installed via `brew install coffee-script` or `npm install coffee-script`.\n\nSimply execute `cake dev` to start continuous compilation. You may also want to run `npm link` so that whenever you call `require('webdav-sync')` it will always point to the current dev version.\n\n### Change log\n\n - 0.1.1: First release\n - 0.2.4: Upgrading to node 0.6.x\n\n### TODO\n\n* Remove curl dependencies\n* Add tests\n\n### License \n\n(The MIT License)\n\nCopyright (c) 2011 Bermi Ferrer &lt;bermi@bermilabs.com&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n'Software'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bermi/webdav-sync.git"
+  },
+  "_id": "webdav-sync@0.2.4",
+  "dist": {
+    "shasum": "1974b0da4c82c6481098a78b6c7541dbbb9f0f4d"
+  },
+  "_from": "webdav-sync"
 }

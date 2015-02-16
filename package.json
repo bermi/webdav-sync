@@ -1,6 +1,6 @@
 {
   "name": "webdav-sync",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Basic local sync to WebDAV servers",
   "author": {
     "name": "Bermi Ferrer",
@@ -43,9 +43,6 @@
     "optimist": "0.3.x",
     "pkginfo": "0.2.x"
   },
-  "devDependencies": {
-    "coffee-script": "1.2.x"
-  },
   "engines": {
     "node": ">=0.6"
   },
@@ -55,7 +52,7 @@
     "type": "git",
     "url": "git://github.com/bermi/webdav-sync.git"
   },
-  "_id": "webdav-sync@0.2.4",
+  "_id": "webdav-sync@0.3.1",
   "dist": {
     "shasum": "1974b0da4c82c6481098a78b6c7541dbbb9f0f4d"
   },

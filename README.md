@@ -25,9 +25,10 @@ Show help:
 Options:
   --remote_base  URL for the remote endpoint            [required]
   --local_base   Path to the local directory            [required]
-  --curl         Default curl command                   [default: "curl --insecure --verbose"]
+  --curl         Default curl command                   [default: "curl --insecure -s -S"]
   --ignored      Comma separated list of ignored paths  [default: ".hg,.git,.svn,.DS_Store"]
-  --help         Displays this help
+  --verbose      Makes webdav-sync more talkative with complete curl command and timestamp 
+  --help, -h     Displays this help
 
 
 Syncing /var/src/code with https://user:pass@demandware.com/webdav/cartridge/
@@ -59,6 +60,8 @@ Simply execute `cake dev` to start continuous compilation. You may also want to 
 
  - 0.1.1: First release
  - 0.2.4: Upgrading to node 0.6.x
+ - 0.3.0: Cleanup and --verbose flag added
+ - 0.3.1: File transfer fixes and transfer status icons
 
 ### TODO
 

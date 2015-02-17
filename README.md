@@ -50,10 +50,6 @@ You can also include webdav-sync into your node app
 
 ### Development
 
-If you clone the repository or download a tarball from github you will need CoffeeScript.
-
-It can be installed via `brew install coffee-script` or `npm install coffee-script`.
-
 Simply execute `cake dev` to start continuous compilation. You may also want to run `npm link` so that whenever you call `require('webdav-sync')` it will always point to the current dev version.
 
 ### Change log
@@ -61,7 +57,7 @@ Simply execute `cake dev` to start continuous compilation. You may also want to 
  - 0.1.1: First release
  - 0.2.4: Upgrading to node 0.6.x
  - 0.3.0: Cleanup and --verbose flag added
- - 0.3.1: File transfer fixes and transfer status icons
+ - 0.4.0: Minor update due to change in stdout: File transfer fixes, connection test, transfer status icons
 
 ### TODO
 

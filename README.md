@@ -30,6 +30,15 @@ Options:
   --verbose      Makes webdav-sync more talkative with complete curl command and timestamp 
   --help, -h     Displays this help
 
+    
+    Options:
+      --remote_base  URL for the remote endpoint            [required]
+      --local_base   Path to the local directory            [required]
+      --curl         Default curl command                   [default: "curl --insecure -s -S"]
+      --ignored      Comma separated list of ignored paths  [default: ".hg,.git,.svn,.DS_Store"]
+      --verbose      Makes webdav-sync more talkative with complete curl command and timestamp 
+      --help, -h     Displays this help
+    
 
 Syncing /var/src/code with https://user:pass@demandware.com/webdav/cartridge/
 

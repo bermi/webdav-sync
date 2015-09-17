@@ -25,6 +25,8 @@ Show help:
     Options:
       --remote_base  URL for the remote endpoint            [required]
       --local_base   Path to the local directory            [required]
+      --username     Username for secure login              [optional]
+      --password     Password for secure login              [optional]
       --curl         Default curl command                   [default: "curl --insecure -s -S"]
       --ignored      Comma separated list of ignored paths  [default: ".hg,.git,.svn,.DS_Store"]
       --verbose      Makes webdav-sync more talkative with complete curl command and timestamp 
@@ -42,7 +44,9 @@ You can also include webdav-sync into your node app
 
     var options = {
         local_base: "/var/src/code",
-        remote_base: "https://user:pass@demandware.com/webdav/"
+        remote_base: "https://user:pass@demandware.com/webdav/",
+        username: "option@lUsern@me",
+        password: "option@lP@ssword"
     };
     var sync = (require('webdav-sync'))(options);
     sync.start();
@@ -58,6 +62,7 @@ Simply execute `cake dev` to start continuous compilation. You may also want to 
  - 0.2.4: Upgrading to node 0.6.x
  - 0.3.0: Cleanup and --verbose flag added
  - 0.4.0: Minor update due to change in stdout: File transfer fixes, connection test, transfer status icons
+ - 0.4.1: Added options --username & --password as option for secure login (useful for problematic usernames/passwords with special characters...)
 
 ### TODO
 
@@ -68,7 +73,7 @@ Simply execute `cake dev` to start continuous compilation. You may also want to 
 
 (The MIT License)
 
-Copyright (c) 2011 Bermi Ferrer &lt;bermi@bermilabs.com&gt;
+Copyright (c) 2015 Bermi Ferrer &lt;bermi@bermilabs.com&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

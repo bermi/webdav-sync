@@ -11,6 +11,14 @@ var argv = optimist.usage('Syncs a local path with a remote WebDAV server', {
     description: 'Path to the local directory',
     required: true
   },
+  username: {
+    description: 'Username to log into WebDAV server',
+    required: false
+  },
+  password: {
+    description: 'Password to log into WebDAV server',
+    required: false
+  },
   curl: {
     description: 'Default curl command',
     "default": 'curl --insecure -s -S' // --verbose   OR -s -S

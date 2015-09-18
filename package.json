@@ -1,6 +1,6 @@
 {
   "name": "webdav-sync",
-  "version": "0.4.2",
+  "version": "0.4.4",
   "description": "Basic local sync to WebDAV servers",
   "author": {
     "name": "Bermi Ferrer",
@@ -46,13 +46,12 @@
   "engines": {
     "node": ">=0.6"
   },
-  "readme": "README.md",
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git://github.com/bermi/webdav-sync.git"
   },
-  "_id": "webdav-sync@0.4.2",
+  "_id": "webdav-sync@0.4.4",
   "dist": {
     "shasum": "1974b0da4c82c6481098a78b6c7541dbbb9f0f4d"
   },

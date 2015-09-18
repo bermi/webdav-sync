@@ -42,4 +42,4 @@ if (argv.help) {
 
 argv.ignored = argv.ignored.split(',');
 
-(require('./webdav_sync'))(argv).start();
+(require('../lib/webdav_sync'))(argv).start();

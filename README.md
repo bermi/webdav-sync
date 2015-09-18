@@ -62,7 +62,7 @@ Simply execute `cake dev` to start continuous compilation. You may also want to 
  - 0.2.4: Upgrading to node 0.6.x
  - 0.3.0: Cleanup and --verbose flag added
  - 0.4.0: Minor update due to change in stdout: File transfer fixes, connection test, transfer status icons
- - 0.4.1: Added options --username & --password as option for secure login (useful for problematic usernames/passwords with special characters...)
+ - 0.4.4: Added options --username & --password as option for secure login (useful for problematic usernames/passwords with special characters...)
 
 ### TODO
 

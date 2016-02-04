@@ -38,7 +38,7 @@
     "lib": "./lib"
   },
   "dependencies": {
-    "watch": "0.5.x",
+    "watch": "0.17.1",
     "colors": "0.6.x",
     "optimist": "0.3.x",
     "pkginfo": "0.2.x"

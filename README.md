@@ -3,7 +3,7 @@
 Sync a local directory with a WebDAV server.
 
 This tool was created because I wanted an alternative method to work
-with the Demandware e-commerce platform without requiring their 
+with the Demandware e-commerce platform without requiring their
 IDE UX Studio which uses WebDAV to push the code to the development server.
 
 ### Dependencies
@@ -21,7 +21,7 @@ This applications requires a local copy of curl.
 Show help:
 
     webdav-sync -h
-    
+
     Options:
       --remote_base  URL for the remote endpoint            [required]
       --local_base   Path to the local directory            [required]
@@ -29,13 +29,16 @@ Show help:
       --password     Password for secure login              [optional]
       --curl         Default curl command                   [default: "curl --insecure -s -S"]
       --ignored      Comma separated list of ignored paths  [default: ".hg,.git,.svn,.DS_Store"]
-      --verbose      Makes webdav-sync more talkative with complete curl command and timestamp 
+      --verbose      Makes webdav-sync more talkative with complete curl command and timestamp
       --help, -h     Displays this help
-    
+
 
 Syncing /var/src/code with https://user:pass@demandware.com/webdav/cartridge/
 
     webdav-sync --local_base /var/src/code --remote_base "https://user:pass@demandware.com/webdav/"
+
+
+    webdav-sync --local_base /Users/bermi/personal/code/webdav-sync --remote_base "http://192.168.99.100:8888/webdav/" --username test --password test --verbose
 
 
 #### From node.js
@@ -69,7 +72,7 @@ Simply execute `cake dev` to start continuous compilation. You may also want to 
 * Remove curl dependencies
 * Add tests
 
-### License 
+### License
 
 (The MIT License)
 

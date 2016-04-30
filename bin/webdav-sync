@@ -37,7 +37,8 @@ var argv = optimist.usage('Syncs a local path with a remote WebDAV server', {
 }).demand(['remote_base', 'local_base']).argv;
 
 if (argv.help) {
-  return optimist.showHelp();
+  optimist.showHelp();
+  process.exit();
 }
 
 argv.ignored = argv.ignored.split(',');

@@ -38,22 +38,14 @@
     "lib": "./lib"
   },
   "dependencies": {
-    "watch": "0.17.1",
-    "colors": "0.6.x",
-    "optimist": "0.3.x",
-    "pkginfo": "0.2.x"
-  },
-  "engines": {
-    "node": ">=0.6"
+    "watch": "0.18.0",
+    "colors": "1.1.2",
+    "optimist": "0.6.1",
+    "pkginfo": "0.4.0"
   },
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git://github.com/bermi/webdav-sync.git"
-  },
-  "_id": "webdav-sync@0.4.4",
-  "dist": {
-    "shasum": "1974b0da4c82c6481098a78b6c7541dbbb9f0f4d"
-  },
-  "_from": "webdav-sync"
+  }
 }

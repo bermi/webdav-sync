@@ -38,9 +38,6 @@ Syncing /var/src/code with https://user:pass@demandware.com/webdav/cartridge/
     webdav-sync --local_base /var/src/code --remote_base "https://user:pass@demandware.com/webdav/"
 
 
-    webdav-sync --local_base /Users/bermi/personal/code/webdav-sync --remote_base "http://192.168.99.100:8888/webdav/" --username test --password test --verbose
-
-
 #### From node.js
 
 You can also include webdav-sync into your node app
@@ -55,9 +52,6 @@ You can also include webdav-sync into your node app
     sync.start();
 
 
-### Development
-
-Simply execute `cake dev` to start continuous compilation. You may also want to run `npm link` so that whenever you call `require('webdav-sync')` it will always point to the current dev version.
 
 ### Change log
 
@@ -66,11 +60,12 @@ Simply execute `cake dev` to start continuous compilation. You may also want to 
  - 0.3.0: Cleanup and --verbose flag added
  - 0.4.0: Minor update due to change in stdout: File transfer fixes, connection test, transfer status icons
  - 0.4.4: Added options --username & --password as option for secure login (useful for problematic usernames/passwords with special characters...)
+- 0.5.0: Updated npm dependencies
 
 ### TODO
 
 * Remove curl dependencies
-* Add tests
+* Add tests, right now it's been manually tested using [https://hub.docker.com/r/morrisjobke/webdav/]()
 
 ### License
 
